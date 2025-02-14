@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Love, My Valentine 💖</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Georgia', serif;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #ff758c, #ff7eb3);
+            text-align: center;
+            color: white;
+        }
+        .container {
+            position: relative;
+        }
+        .heart {
+            font-size: 80px;
+            cursor: pointer;
+            animation: pulse 1.5s infinite;
+            color: red;
+            transition: transform 0.3s ease;
+        }
+        .heart:hover {
+            transform: scale(1.2);
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.3); }
+            100% { transform: scale(1); }
+        }
+        .message {
+            display: none;
+            font-size: 24px;
+            font-weight: bold;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 20px 30px;
+            border-radius: 15px;
+            opacity: 0;
+            transform: scale(0.8);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+            line-height: 1.5;
+        }
+        .message.show {
+            display: block;
+            opacity: 1;
+            transform: scale(1);
+        }
+        .highlight {
+            color: #ffd700;
+        }
+        .quote {
+            font-style: italic;
+            margin-top: 15px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="heart" onclick="revealLove()">❤️</div>
+        <div class="message">
+            🌹 <span class="highlight">To My Dearest Love,</span> 🌹<br><br>
+            "Doubt thou the stars are fire,  
+            Doubt that the sun doth move,  
+            Doubt truth to be a liar,  
+            But never doubt I love."  
+            <br><span class="quote">- William Shakespeare</span>  
+            <br><br>
+            You are the melody in my heart,  
+            The light in my darkest night.  
+            In your arms, I find my home,  
+            My love for you is infinite and bright.  
+            <br><br>
+            ❤️ <span class="highlight">Happy Valentine’s Day, Babe!</span> ❤️
+        </div>
+    </div>
+
+    <script>
+        function revealLove() {
+            document.querySelector('.message').classList.add('show');
+            document.querySelector('.heart').style.display = 'none';
+        }
+    </script>
+
+</body>
+</html>
